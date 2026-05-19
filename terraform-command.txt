@@ -1,0 +1,140 @@
+Terraform Commands Cheat Sheet
+
+Initialization & Setup
+
+terraform init - Initializes Terraform project - Downloads provider
+plugins - Creates .terraform directory
+
+terraform validate - Validates Terraform syntax and configuration
+
+terraform fmt - Formats Terraform files properly
+
+terraform version - Shows installed Terraform version
+
+terraform providers - Shows providers used in configuration
+
+------------------------------------------------------------------------
+
+Planning & Applying
+
+terraform plan - Shows execution plan before changes
+
+terraform apply - Creates or updates infrastructure
+
+terraform apply -auto-approve - Apply changes without confirmation
+
+terraform destroy - Deletes all managed infrastructure
+
+terraform destroy -auto-approve - Destroy infrastructure without
+confirmation
+
+terraform refresh - Updates Terraform state with real infrastructure
+
+------------------------------------------------------------------------
+
+State Management
+
+terraform state list - Lists resources in Terraform state
+
+terraform state show RESOURCE - Shows detailed information about
+resource
+
+terraform state rm RESOURCE - Removes resource from state file
+
+terraform state mv SOURCE DESTINATION - Moves resource inside state
+
+terraform state pull - Downloads current remote state
+
+terraform state push - Uploads local state to remote backend
+
+------------------------------------------------------------------------
+
+Import & Output
+
+terraform import RESOURCE ID - Imports existing infrastructure into
+Terraform state
+
+terraform output - Displays output values
+
+terraform output OUTPUT_NAME - Shows specific output value
+
+------------------------------------------------------------------------
+
+Workspace Commands
+
+terraform workspace list - Lists all workspaces
+
+terraform workspace show - Shows current active workspace
+
+terraform workspace new NAME - Creates new workspace
+
+terraform workspace select NAME - Switches workspace
+
+terraform workspace delete NAME - Deletes workspace
+
+------------------------------------------------------------------------
+
+Module & Graph
+
+terraform graph - Creates dependency graph
+
+terraform providers mirror - Downloads provider packages locally
+
+terraform get - Downloads modules
+
+------------------------------------------------------------------------
+
+Locking & Force
+
+terraform force-unlock LOCK_ID - Removes Terraform state lock
+
+terraform taint RESOURCE - Marks resource for recreation
+
+terraform untaint RESOURCE - Removes tainted status
+
+------------------------------------------------------------------------
+
+Console & Debugging
+
+terraform console - Opens interactive Terraform console
+
+terraform show - Displays current state or plan
+
+terraform login - Authenticates with Terraform Cloud
+
+terraform logout - Removes Terraform Cloud credentials
+
+------------------------------------------------------------------------
+
+Useful Options
+
+-chdir=DIR - Run Terraform from another directory
+
+-var=“name=value” - Pass variable value directly
+
+-var-file=“file.tfvars” - Load variables from tfvars file
+
+-target=RESOURCE - Apply changes to specific resource only
+
+-parallelism=n - Control parallel resource creation
+
+------------------------------------------------------------------------
+
+Common Terraform Workflow
+
+terraform init terraform validate terraform plan terraform apply
+
+------------------------------------------------------------------------
+
+Most Important Commands for Beginners
+
+1.  terraform init
+2.  terraform plan
+3.  terraform apply
+4.  terraform destroy
+5.  terraform validate
+6.  terraform fmt
+7.  terraform workspace commands
+8.  terraform import
+9.  terraform output
+10. terraform state commands
